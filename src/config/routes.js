@@ -9,4 +9,6 @@ module.exports = function(server) {
     // Rotas de Ciclo de Pagamento 
     const Category = require('../api/category/categoryService')
     Category.register(router, '/category')
+    const Account = require('../api/account/accountService')
+    Account.register(router, '/account')
 }
