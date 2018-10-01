@@ -6,7 +6,8 @@ const Transaction = new mongoose.Schema({
     due_date : { type : Date, default : Date.now },
     description : { type : String, required : true },
     category_id : {type : String, required : true },
-    account_id : { type : String, required : true },
+    debit_account_id : { type : String },
+    credit_account_id : { type : String },
     value : { type : Number, required : true, default : 0, min : 0 },
     consolidated : { type: Boolean, required : true, default : true },
     createdAt : { type : Date, default : Date.now }
