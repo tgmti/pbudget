@@ -11,4 +11,6 @@ module.exports = function(server) {
     Category.register(router, '/category')
     const Account = require('../api/account/accountService')
     Account.register(router, '/account')
+    const Transaction = require('../api/transaction/transactionService')
+    Transaction.register(router, '/transaction')
 }
