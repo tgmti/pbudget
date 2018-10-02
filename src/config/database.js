@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
-module.exports = mongoose.connect('mongodb://localhost/pbudget')
+module.exports = mongoose
+    .connect('mongodb://pbudget_api:VwiNJGi5esHkrQ6@ds121163.mlab.com:21163/pbudget_test'
+    , {  useMongoClient: true });
 
 mongoose.Error.messages.general.required = "O atributo '{PATH}' é obrigatório."
 mongoose.Error.messages.Number.min = 
